@@ -2,31 +2,42 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm justify-between w-[80%] mx-auto">
+    <div className="text-indigo-800 shadow-sm w-full font-bold">
+      <div className="navbar justify-between w-[90%] lg:w-[80%] mx-auto py-3">
 
-      {/* Left (Logo) */}
-      <div>
-        <a className="btn btn-ghost text-xl">DigiTools</a>
-      </div>
+        <div className="flex items-center gap-2">
+          <div className="dropdown lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost p-2">
+              ☰
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52 space-y-2"
+            >
+              <li>Products</li>
+              <li>Features</li>
+              <li>Pricing</li>
+              <li>Testimonials</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
 
-      {/* Middle (Menu) */}
-      <ul className="flex gap-6">
-        <li>Products</li>
-        <li>Features</li>
-        <li>Pricing</li>
-        <li>Testimonials</li>
-        <li>FAQ</li>
-      </ul>
+          <a className="btn btn-ghost font-bold text-xl sm:text-2xl lg:text-3xl p-0">
+            DigiTools
+          </a>
+        </div>
 
-      {/* Right (Cart + Avatar) */}
-      <div className="flex items-center gap-4">
+        <ul className="hidden lg:flex gap-6 text-base">
+          <li className="cursor-pointer hover:text-primary transition">Products</li>
+          <li className="cursor-pointer hover:text-primary transition">Features</li>
+          <li className="cursor-pointer hover:text-primary transition">Pricing</li>
+          <li className="cursor-pointer hover:text-primary transition">Testimonials</li>
+          <li className="cursor-pointer hover:text-primary transition">FAQ</li>
+        </ul>
 
-        {/* Cart */}
-        <div className="flex items-center gap-3">
-
-          {/* Cart */}
+        <div className="flex items-center gap-2 sm:gap-4">
           <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle p-2">
               <div className="indicator">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
@@ -37,18 +48,14 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Login */}
-          <h2 className="cursor-pointer font-medium hover:text-primary transition">
+          <h2 className="hidden sm:block cursor-pointer font-medium hover:text-primary transition">
             Login
           </h2>
 
+          <button className="btn text-white text-xs sm:text-sm lg:text-base rounded-full bg-gradient-to-r from-purple-600 to-indigo-700 px-3 sm:px-5 py-2">
+            Get Started
+          </button>
         </div>
-
-        {/* Avatar */}
-
-        <button className="btn rounded-4xl bg-gradient-to-r from-purple-600 to-indigo-700 ">Get Started</button>
-
-
 
       </div>
     </div>
