@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-const MainCard = ({ card }) => {
+const MainCard = ({ card, carts, setCarts }) => {
     const [buyNow, alreadyAddedToCart] = useState(false)
     const handelBuyNow = () => {
         alreadyAddedToCart(true)
+        setCarts([...carts, card])
     }
 
     return (
@@ -45,7 +46,7 @@ const MainCard = ({ card }) => {
                 ))}
             </ul>
 
-        <button onClick={ handelBuyNow} className="w-full py-3 bg-[#8B19FF] text-white rounded-full font-bold hover:bg-[#420e8a] transition">
+            <button onClick={handelBuyNow} className="w-full py-3 bg-[#8B19FF] text-white rounded-full font-bold hover:bg-[#420e8a] transition">
                 {buyNow ? "Already Added To cart" : "Buy Now"}
             </button>
 

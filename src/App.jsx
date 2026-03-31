@@ -20,7 +20,9 @@ const dataPromise = getData()
 
 function App() {
   const [activeTab, setActiveTab] = useState('products');
-  console.log(activeTab);
+  const [carts, setCarts] = useState([]);
+
+
 
 
 
@@ -64,8 +66,8 @@ function App() {
         </div>
 
       </section>
-      {activeTab === "products" && <Cards dataPromise={dataPromise} />}
-      {activeTab === "cart" && <CartItems />}
+      {activeTab === "products" && <Cards dataPromise={dataPromise} carts={carts} setCarts={setCarts} />}
+      {activeTab === "cart" && <CartItems carts={carts} />}
       <CreatingAccounts />
       <Pricing />
       <Workflow />
