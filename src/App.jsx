@@ -67,7 +67,7 @@ function App() {
 
       </section>
       {activeTab === "products" && <Cards dataPromise={dataPromise} carts={carts} setCarts={setCarts} />}
-      {activeTab === "cart" && <CartItems carts={carts} />}
+      {activeTab === "cart" && <CartItems carts={carts}  setCarts={setCarts}/>}
       <CreatingAccounts />
       <Pricing />
       <Workflow />
