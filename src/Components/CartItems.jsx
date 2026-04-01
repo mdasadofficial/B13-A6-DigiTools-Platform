@@ -49,12 +49,12 @@ const CartItems = ({ carts, setCarts }) => {
                       </div>
 
 
-                      <button
-                        onClick={() => onRemove(item)}
-                        className="text-pink-500 font-semibold hover:text-pink-600 transition-colors px-4 py-2"
-                      >
-                        Remove
-                      </button>
+                     <button
+                      onClick={() => onRemove(item)}
+                      className="text-pink-500 text-xs md:text-sm font-semibold hover:text-pink-600 transition-colors px-2 md:px-4 py-2"
+                    >
+                      Remove
+                    </button>
                     </div>
 
                   </div>
