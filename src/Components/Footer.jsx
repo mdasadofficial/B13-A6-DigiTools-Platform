@@ -49,13 +49,13 @@ const Footer = () => {
                         <h3 className="font-bold mb-4">Social Links</h3>
                         <div className="flex gap-3 sm:gap-4">
                             <div className="w-7 h-7 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center text-black hover:bg-purple-400 transition cursor-pointer">
-                                <span className="text-[10px] sm:text-xs font-bold">IG</span>
+                                <i class="fa-brands fa-instagram"></i>
                             </div>
                             <div className="w-7 h-7 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center text-black hover:bg-purple-400 transition cursor-pointer">
-                                <span className="text-[10px] sm:text-xs font-bold">FB</span>
+                               <i class="fa-brands fa-facebook"></i>
                             </div>
                             <div className="w-7 h-7 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center text-black hover:bg-purple-400 transition cursor-pointer">
-                                <span className="text-[10px] sm:text-xs font-bold">X</span>
+                               <i class="fa-brands fa-square-x-twitter"></i>
                             </div>
                         </div>
                     </div>
@@ -77,3 +77,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
