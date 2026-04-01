@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { toast } from 'react-toastify';
 
 const MainCard = ({ card, carts, setCarts }) => {
-    const [buyNow, alreadyAddedToCart] = useState(false)
+   
+
+    const isExist = carts.find( item => item.id === card.id)
     const handelBuyNow = () => {
-        alreadyAddedToCart(true)
+        
+        if (isExist){
+            toast.error("item already added ")
+            return;
+        }
         setCarts([...carts, card])
         toast("Item added to Cart")
     }
@@ -49,7 +55,7 @@ const MainCard = ({ card, carts, setCarts }) => {
             </ul>
 
             <button onClick={handelBuyNow} className="w-full py-3 bg-[#8B19FF] text-white rounded-full font-bold hover:bg-[#420e8a] transition">
-                {buyNow ? "Already Added To cart" : "Buy Now"}
+                {isExist ? "Already Added To cart" : "Buy Now"}
             </button>
 
         </div>
