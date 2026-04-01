@@ -4,6 +4,12 @@ const CartItems = ({ carts, setCarts }) => {
   const totalPrice = carts.reduce((sum, item) => sum + item.price, 0)
   const checkOut = () => {
     setCarts([])
+  };
+
+
+  const onRemove = (item) =>{
+    const lastItems = carts.filter(removed => removed.id !== item.id )
+    setCarts(lastItems)
   }
 
   return (
@@ -16,7 +22,7 @@ const CartItems = ({ carts, setCarts }) => {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mb-4 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg> 
+            </svg>
             <p className="text-xl font-medium">Your cart is empty</p>
           </div> :
           <>
@@ -41,7 +47,7 @@ const CartItems = ({ carts, setCarts }) => {
 
 
                       <button
-                        onClick={() => onRemove(item.id)}
+                        onClick={() => onRemove(item)}
                         className="text-pink-500 font-semibold hover:text-pink-600 transition-colors px-4 py-2"
                       >
                         Remove
@@ -69,6 +75,6 @@ const CartItems = ({ carts, setCarts }) => {
 
     </div>
   );
-};
+  };
 
-export default CartItems;  
+  export default CartItems;  
