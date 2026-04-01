@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar carts={carts} />
       <Hero />
       <CounterSection />
       <section className="bg-white py-20 px-6">
@@ -60,7 +60,7 @@ function App() {
                 : 'bg-transparent text-gray-500 hover:text-[#7F2BFF]'
                 }`}
             >
-              Cart (0)
+              Cart {`${carts.length}`}
             </button>
           </div>
         </div>
