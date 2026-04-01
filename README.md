@@ -19,8 +19,13 @@ Data: Custom JSON
 ### - 3 Features about your project. 
  
 ✅ Dynamic Product Display: ৬-১০টি প্রিমিয়াম টুলের একটি সুসজ্জিত কিউরেটেড কালেকশন।
+
 ✅ Smart Toggling: প্রোডাক্ট এবং কার্ট সেকশনের মধ্যে স্মুথ টগলিং সিস্টেম।
+
 ✅ Functional Shopping Cart: কার্টে প্রোডাক্ট যোগ করা, রিমুভ করা এবং রিয়েল-টাইম নেভবার কাউন্ট আপডেট।
+
 ✅ Toast Notifications: React-Toastify ব্যবহার করে 'Add to Cart', 'Remove' এবং 'Checkout' এর জন্য ইউজার ফ্রেন্ডলি অ্যালার্ট।
+
 ✅ Total Price Calculation: কার্টে থাকা প্রোডাক্টগুলোর ডাইনামিক প্রাইস ক্যালকুলেশন।
+
 ✅ Fully Responsive: মোবাইল থেকে ডেস্কটপ—সব ডিভাইসের জন্য পিক্সেল পারফেক্ট ডিজাইন।
